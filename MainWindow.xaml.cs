@@ -510,19 +510,7 @@ namespace Microsoft.Samples.Kinect.BodyBasics
         {
 
         }
-        private void killAudio()
-        {
-
-                this.speechEngine.SpeechRecognized -= this.SpeechRecognized;
-                                                                                                                  
-           
-        }
-        private void startAudio()
-        {
-            this.speechEngine.SpeechRecognized += this.SpeechRecognized;
-
-
-        }
+        
         public void healthScan()
         {   if(healthScanCount ==0){
             scanningHealthMode = true;
@@ -531,9 +519,9 @@ namespace Microsoft.Samples.Kinect.BodyBasics
 
             //switch to color camera
           //  synth.SpeakAsync("Let's double check with a health scan. Please match the box that is bounded around your head with the stationary box on screen.");
-            killAudio();
+           
             synth.SpeakAsync("Good to hear that you're okay. Please be careful!");
-            startAudio();
+            
         }
         healthScanCount++;
 
@@ -596,9 +584,9 @@ namespace Microsoft.Samples.Kinect.BodyBasics
             userIncapacitated = true;
             incapacitatedStopWatch.Stop();
             this.incapacitatedStopWatch.Reset();
-            killAudio();
+            
             synth.SpeakAsync("I have confirmed your fall. I am now contacting Emergency Responders. Dont worry, help is on the way" + App.UserName);
-            startAudio();
+            
             this.openColorCamera();
 
 
@@ -768,10 +756,10 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                     incapacitatedStopWatch.Reset();
                     incapacitatedStopWatch.Start();
 
-                    killAudio();
+                    
                         String question = "I have detected a fall. " + App.UserName + "Are you alright?";
                         synth.SpeakAsync(question);
-                  startAudio();
+                 
                         fallDetectedLoopCount++;
 
 
