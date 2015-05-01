@@ -1,0 +1,16 @@
+﻿<Window x:Class="Microsoft.Samples.Kinect.BodyBasics.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="login" Height="600" Width="700">
+    <Grid>
+
+        <Image Source="C:\mercpics\mercbackground.png" Margin="0,-151,-0.4,151.4" />
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Height="23" Margin="263,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" RenderTransformOrigin="-0.027,0.565" SelectionOpacity="-2"/>
+        <TextBox x:Name="PhoneTextBox" HorizontalAlignment="Left" Height="23" Margin="263,338,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" RenderTransformOrigin="-0.027,0.565" SelectionOpacity="-2"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="302,387,0,0" VerticalAlignment="Top" Width="78" Click="login_clicked" RenderTransformOrigin="0.523,-2.042" Height="26">
+        </Button>
+        <TextBlock FontFamily="Arial" Text="First Name:" Margin="186,283,435.6,265.4" RenderTransformOrigin="0.513,0.77" FontWeight="Bold"/>
+        <TextBlock FontFamily="Arial" Text="Phone Number:" Margin="163,338,435.6,210.4" RenderTransformOrigin="0.513,0.77" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
