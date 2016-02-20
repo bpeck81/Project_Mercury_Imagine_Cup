@@ -1042,11 +1042,11 @@ namespace Microsoft.Samples.Kinect.BodyBasics
                 blockBlob.UploadFromStream(fileStream);
             }
 
-            string AccountSid = "ACcede45d69b4fc154cd460dba697945bf";
-            string AuthToken = "561437467238219b932d3307d9e009cb";
+            string AccountSid = "Removed For Privacy Purposes";
+            string AuthToken = "Removed For Privacy Purposes";
 
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
-            var message = twilio.SendMessage("+13476258746", "+1" + App.UserNumber, App.UserName +" has fallen and requires assitance!", new string[] { "http://projectmercury.blob.core.windows.net/photos/" + filename });
+            var message = twilio.SendMessage("Removed For Privacy Purposes"+1" + App.UserNumber, App.UserName +" has fallen and requires assitance!", new string[] { "http://projectmercury.blob.core.windows.net/photos/" + filename });
 
             Console.WriteLine("message sent");
             //this.fallDetected = false;
@@ -1054,9 +1054,9 @@ namespace Microsoft.Samples.Kinect.BodyBasics
         }
         private void connectPhoneCall()
         {
-            string AccountSid = "ACcede45d69b4fc154cd460dba697945bf";
-            string AuthToken = "561437467238219b932d3307d9e009cb";
-            var phonenumber = "+13476258746";
+            string AccountSid = "Removed For Privacy Purposes";
+            string AuthToken = "Removed For Privacy Purposes";
+            var phonenumber = "Removed For Privacy Purposes"
             var client = new TwilioRestClient(AccountSid, AuthToken);
             var call = client.InitiateOutboundCall(phonenumber, App.UserNumber, "http:.//demo.twilio.com/welcome/voice/");
             if (call.RestException == null)
